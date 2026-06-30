@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Student Buddy",
+  "version": "1.0",
+  "description": "AI-powered study assistant",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["https://openrouter.ai/*"],
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
